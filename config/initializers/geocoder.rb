@@ -1,8 +1,8 @@
 Geocoder.configure(
   # geocoding options
- :timeout      => 15,           # geocoding service timeout (secs)
+ #:timeout      => 15,           # geocoding service timeout (secs)
  :lookup       => :dstk,     # name of geocoding service (symbol)
-:host => "ec2-54-76-22-24.eu-west-1.compute.amazonaws.com"
+:host => "localhost"
   # :language     => :en,         # ISO-639 language code
   # :use_https    => false,       # use HTTPS for lookup requests? (if supported)
   # :http_proxy   => nil,         # HTTP proxy server (user:pass@host:port)
