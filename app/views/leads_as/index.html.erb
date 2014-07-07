@@ -1,0 +1,51 @@
+<h1>Listing leads_as</h1>
+
+<h2>Import Leads</h2>
+<%= form_tag import_leads_as_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>Address3</th>
+    <th>Address4</th>
+    <th>Firstname</th>
+    <th>Homephone</th>
+    <th>Lastname</th>
+    <th>Postcode</th>
+    <th>Price</th>
+    <th>Title</th>
+    <th>Address5</th>
+    <th>Address6</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @leads_as.each do |leads_a| %>
+  <tr>
+    <td><%= leads_a.Address1 %></td>
+    <td><%= leads_a.Address2 %></td>
+    <td><%= leads_a.Address3 %></td>
+    <td><%= leads_a.Address4 %></td>
+    <td><%= leads_a.FirstName %></td>
+    <td><%= leads_a.HomePhone %></td>
+    <td><%= leads_a.LastName %></td>
+    <td><%= leads_a.Postcode %></td>
+    <td><%= leads_a.Price %></td>
+    <td><%= leads_a.Title %></td>
+    <td><%= leads_a.Address5 %></td>
+    <td><%= leads_a.Address6 %></td>
+    <td><%= link_to 'Show', leads_a %></td>
+    <td><%= link_to 'Edit', edit_leads_a_path(leads_a) %></td>
+    <td><%= link_to 'Destroy', leads_a, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Leads a', new_leads_a_path %>
