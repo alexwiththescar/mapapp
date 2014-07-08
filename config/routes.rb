@@ -1,4 +1,6 @@
 Mapapp::Application.routes.draw do
+  resources :venues
+
   resources :leads_as do
     collection { post :import }
   end
