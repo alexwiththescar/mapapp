@@ -1,0 +1,93 @@
+<%= form_for(@leads_b) do |f| %>
+  <% if @leads_b.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leads_b.errors.count, "error") %> prohibited this leads_b from being saved:</h2>
+
+      <ul>
+      <% @leads_b.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Address1 %><br />
+    <%= f.text_field :Address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Address2 %><br />
+    <%= f.text_field :Address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :Address3 %><br />
+    <%= f.text_field :Address3 %>
+  </div>
+  <div class="field">
+    <%= f.label :Address4 %><br />
+    <%= f.text_field :Address4 %>
+  </div>
+  <div class="field">
+    <%= f.label :FirstName %><br />
+    <%= f.text_field :FirstName %>
+  </div>
+  <div class="field">
+    <%= f.label :HomePhone %><br />
+    <%= f.text_field :HomePhone %>
+  </div>
+  <div class="field">
+    <%= f.label :LastName %><br />
+    <%= f.text_field :LastName %>
+  </div>
+  <div class="field">
+    <%= f.label :Postcode %><br />
+    <%= f.text_field :Postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %><br />
+    <%= f.text_field :Price %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :Address5 %><br />
+    <%= f.text_field :Address5 %>
+  </div>
+  <div class="field">
+    <%= f.label :Address6 %><br />
+    <%= f.text_field :Address6 %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :gmap %><br />
+    <%= f.check_box :gmap %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :Distance %><br />
+    <%= f.text_field :Distance %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %><br />
+    <%= f.text_field :Price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

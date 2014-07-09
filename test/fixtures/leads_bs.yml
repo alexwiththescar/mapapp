@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Address1: MyString
+  Address2: MyString
+  Address3: MyString
+  Address4: MyString
+  FirstName: MyString
+  HomePhone: MyString
+  LastName: MyString
+  Postcode: MyString
+  Price: MyString
+  Title: MyString
+  Address5: MyString
+  Address6: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmap: false
+  latitude: 1.5
+  longitude: 1.5
+  Distance: MyString
+  Price: MyString
+
+two:
+  Address1: MyString
+  Address2: MyString
+  Address3: MyString
+  Address4: MyString
+  FirstName: MyString
+  HomePhone: MyString
+  LastName: MyString
+  Postcode: MyString
+  Price: MyString
+  Title: MyString
+  Address5: MyString
+  Address6: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmap: false
+  latitude: 1.5
+  longitude: 1.5
+  Distance: MyString
+  Price: MyString
