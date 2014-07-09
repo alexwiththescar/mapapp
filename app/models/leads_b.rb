@@ -4,6 +4,10 @@ class LeadsB < ActiveRecord::Base
   after_validation :geocode
   acts_as_gmappable 
 
+  def gmaps4rails_address 
+      	postcode
+     	end
+
 def self.import(file)
   CSV.foreach(file.path, headers: true) do |row|
     LeadsB.create! row.to_hash
