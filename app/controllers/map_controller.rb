@@ -9,7 +9,7 @@ class MapController < ApplicationController
 @hashA = Venue.all.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
-   marker.infowindow lead.name
+   marker.infowindow lead.postcode
    
 end
 
