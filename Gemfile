@@ -6,6 +6,8 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 #gem 'activerecord-mysql-adapter'
 gem 'mysql2'
+gem 'execjs'
+gem 'therubyracer', :platform => :ruby
 
 
 # Gems used only for assets and not required
