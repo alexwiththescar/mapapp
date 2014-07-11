@@ -39,6 +39,7 @@ end
 ### for some reason, when adding the two arrays, to_gmaps4rails seems to make a string, so we 
 ### need to remove the array brackets after we concat the string. Hacky way, but it works!
 @map.gsub! "][", ","
+@map.gsub! ",,", ","
 ## We now have an array of hashes @map! Yay!
 
 
