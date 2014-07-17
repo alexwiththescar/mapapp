@@ -35,7 +35,7 @@ end
    })
 end
 
-@map = @hashA + @hashB + @hashC
+@map = @hashA # + @hashB + @hashC
 ### for some reason, when adding the two arrays, to_gmaps4rails seems to make a string, so we 
 ### need to remove the array brackets after we concat the string. Hacky way, but it works!
 @map.gsub! "][", ","
