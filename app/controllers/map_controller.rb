@@ -12,7 +12,7 @@ class MapController < ApplicationController
    marker.infowindow lead.postcode
    
 end
-leadsb = LeadsA.find(:venue, "1")
+leadsb = LeadsA.find(:all, :conditions => [ "venue = ?", 1])
 @hashB = leadsb.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
@@ -24,7 +24,7 @@ leadsb = LeadsA.find(:venue, "1")
    })
 end
 
-leadsa = LeadsA.find(:venue, "2")
+leadsa = LeadsA.find(:all, :conditions => [ "venue = ?", 2])
 @hashC = leadsa.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
