@@ -36,7 +36,19 @@ leadsa = LeadsA.find(:all, :conditions => [ "venue = ?", 2])
    })
 end
 
-@map = @hashA  + @hashB + @hashC
+lead = LeadsB.all
+@hashD = lead.to_gmaps4rails do |lead, marker|
+   lead.latitude
+   lead.longitude
+   marker.infowindow lead.Postcode
+    marker.picture({
+    "picture" => "../assets/map_orange.png",
+    "width" =>  '10',        
+    "height" => '10'
+   })
+end
+
+@map = @hashA  + @hashB + @hashC + @hashD
 ### for some reason, when adding the two arrays, to_gmaps4rails seems to make a string, so we 
 ### need to remove the array brackets after we concat the string. Hacky way, but it works!
 @map.gsub! "][", ","
