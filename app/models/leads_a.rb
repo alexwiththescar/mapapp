@@ -30,9 +30,11 @@ class LeadsA < ActiveRecord::Base
   acts_as_gmappable :process_geocoding => false
 
 def self.import(file)
+	Thread.new do
   CSV.foreach(file.path, headers: true) do |row|
     LeadsA.create! row.to_hash
   end
+end
 end
 
 
