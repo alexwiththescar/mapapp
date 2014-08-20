@@ -24,7 +24,7 @@ leadsb = LeadsA.find(:all, :conditions => [ "price > ?", 300000])
    })
 end
 
-leadsa = LeadsA.find(:all, :conditions => [ "price < ?", 2])
+leadsa = LeadsA.find(:all, :conditions => [ "price < ? AND price < ?", 200000, 249999])
 @hashC = leadsa.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
@@ -36,8 +36,8 @@ leadsa = LeadsA.find(:all, :conditions => [ "price < ?", 2])
    })
 end
 
-lead = LeadsB.all
-@hashD = lead.to_gmaps4rails do |lead, marker|
+leadsa = LeadsA.find(:all, :conditions => [ "price < ? AND price < ?", 250000, 299999])
+@hashD = leadsa.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
    marker.infowindow lead.Postcode
