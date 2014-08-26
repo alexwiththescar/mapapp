@@ -12,7 +12,7 @@ class MapController < ApplicationController
    marker.infowindow lead.postcode
    
 end
-leadsb = LeadsA.find(:all, :conditions => [ "price > ?", 300000])
+leadsb = LeadsA.find(:all, :conditions => [ "price > ? AND count > 0", 300000])
 @hashB = leadsb.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
@@ -48,7 +48,7 @@ leadsa = LeadsA.find(:all, :conditions => [ "price < ? AND price < ?", 250000, 2
    })
 end
 
-@map = @hashB + @hashC + @hashD
+@map = @hashB #+ @hashC + @hashD
 ### for some reason, when adding the two arrays, to_gmaps4rails seems to make a string, so we 
 ### need to remove the array brackets after we concat the string. Hacky way, but it works!
 @map.gsub! "][", ","
