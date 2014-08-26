@@ -1,4 +1,8 @@
 Mapapp::Application.routes.draw do
+  resources :people do
+    collection { post :import }
+  end
+
   resources :leads_bs do
     collection { post :import }
   end
