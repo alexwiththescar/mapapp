@@ -12,7 +12,7 @@ class MapController < ApplicationController
    marker.infowindow lead.postcode
    
 end
-leadsb = LeadsA.find(:all, :conditions => [ "price > ? AND count > 0", 300000])
+leadsb = LeadsA.find(:all, :conditions => [ "price > ? AND count > ?", 300000, 1])
 @hashB = leadsb.to_gmaps4rails do |lead, marker|
    lead.latitude
    lead.longitude
