@@ -11,4 +11,5 @@ l = LeadsA.all
 
 l.each do |l|
 l.count  = @count[l.Postcode]
+l.save
 end
