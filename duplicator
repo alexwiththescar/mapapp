@@ -1,0 +1,15 @@
+l = LeadsA.all
+
+l.each do |l|
+count = l.count.to_i
+
+if count == 0
+
+else
+	count.times do
+count = count - 1
+ln = LeadsA.new
+ln = l.dup
+ln.save
+end
+end
